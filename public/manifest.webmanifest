@@ -1,0 +1,10 @@
+{
+  "name": "Card Game Guide: Learn Blackjack & Poker",
+  "short_name": "Card Guide",
+  "description": "Learn Blackjack and Texas Hold'em fast with lessons, coached practice and memory drills.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1a14",
+  "theme_color": "#0b3d2b",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
