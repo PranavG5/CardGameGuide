@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { ScrollToTop } from './components/Layout';
 import Home from './pages/Home';
 
@@ -32,35 +33,37 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
-      <Suspense fallback={<div className="center muted" style={{ padding: 60 }}>Shuffling…</div>}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blackjack" element={<BjHub />} />
-          <Route path="/blackjack/learn" element={<BjLearn />} />
-          <Route path="/blackjack/chart" element={<BjChart />} />
-          <Route path="/blackjack/practice" element={<BjPractice />} />
-          <Route path="/blackjack/drill" element={<BjDrill />} />
-          <Route path="/blackjack/play" element={<BjPlay />} />
-          <Route path="/blackjack/counting" element={<BjCounting />} />
-          <Route path="/blackjack/odds" element={<BjOdds />} />
-          <Route path="/poker" element={<PkHub />} />
-          <Route path="/poker/learn" element={<PkLearn />} />
-          <Route path="/poker/rankings" element={<PkRankings />} />
-          <Route path="/poker/starting-hands" element={<PkStarting />} />
-          <Route path="/poker/preflop" element={<PkPreflop />} />
-          <Route path="/poker/showdown" element={<PkShowdown />} />
-          <Route path="/poker/draws" element={<PkDraws />} />
-          <Route path="/poker/pot-odds" element={<PkPotOdds />} />
-          <Route path="/poker/play" element={<PkPlay />} />
-          <Route path="/poker/calculator" element={<PkCalc />} />
-          <Route path="/poker/spots" element={<PkSpots />} />
-          <Route path="/daily" element={<Daily />} />
-          <Route path="/glossary" element={<Glossary />} />
-          <Route path="/progress" element={<ProgressPage />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
+      <ErrorBoundary>
+        <Suspense fallback={<div className="center muted" style={{ padding: 60 }}>Shuffling…</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/blackjack" element={<BjHub />} />
+            <Route path="/blackjack/learn" element={<BjLearn />} />
+            <Route path="/blackjack/chart" element={<BjChart />} />
+            <Route path="/blackjack/practice" element={<BjPractice />} />
+            <Route path="/blackjack/drill" element={<BjDrill />} />
+            <Route path="/blackjack/play" element={<BjPlay />} />
+            <Route path="/blackjack/counting" element={<BjCounting />} />
+            <Route path="/blackjack/odds" element={<BjOdds />} />
+            <Route path="/poker" element={<PkHub />} />
+            <Route path="/poker/learn" element={<PkLearn />} />
+            <Route path="/poker/rankings" element={<PkRankings />} />
+            <Route path="/poker/starting-hands" element={<PkStarting />} />
+            <Route path="/poker/preflop" element={<PkPreflop />} />
+            <Route path="/poker/showdown" element={<PkShowdown />} />
+            <Route path="/poker/draws" element={<PkDraws />} />
+            <Route path="/poker/pot-odds" element={<PkPotOdds />} />
+            <Route path="/poker/play" element={<PkPlay />} />
+            <Route path="/poker/calculator" element={<PkCalc />} />
+            <Route path="/poker/spots" element={<PkSpots />} />
+            <Route path="/daily" element={<Daily />} />
+            <Route path="/glossary" element={<Glossary />} />
+            <Route path="/progress" element={<ProgressPage />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+      </ErrorBoundary>
     </>
   );
 }
