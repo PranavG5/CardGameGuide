@@ -18,6 +18,7 @@ const MODULES: { id: string; name: string; to: string }[] = [
   { id: 'pk-showdown', name: 'Who wins?', to: '/poker/showdown' },
   { id: 'pk-outs', name: 'Draws & outs', to: '/poker/draws' },
   { id: 'pk-potodds', name: 'Pot odds', to: '/poker/pot-odds' },
+  { id: 'pk-spots', name: 'Fold, check or raise', to: '/poker/spots' },
   { id: 'pk-play', name: 'Poker table (coach agreement)', to: '/poker/play' },
   { id: 'daily', name: 'Daily challenge', to: '/daily' },
 ];
