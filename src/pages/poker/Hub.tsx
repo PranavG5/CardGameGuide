@@ -35,6 +35,15 @@ export default function PokerHub() {
           );
         })}
       </div>
+      <div className="section-title">Decision trainer</div>
+      <div className="stack">
+        <Tile
+          to="/poker/spots"
+          icon="🎲"
+          name="Fold, check or raise"
+          desc="Random hands in random spots. Make the call, then see the math behind the right play."
+        />
+      </div>
       <div className="section-title">Memory games & tools</div>
       <div className="grid-2">
         <Tile to="/poker/preflop?mode=sprint" icon="⚡" name="Play-or-fold sprint" desc="60 seconds of preflop decisions" />

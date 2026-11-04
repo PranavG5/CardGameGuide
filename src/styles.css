@@ -388,6 +388,18 @@ table.chart td.dimmed { opacity: 0.25; }
 .meter > div { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 99px; background: var(--good); }
 .meter > .need { background: transparent; border-right: 3px solid var(--bad); border-radius: 0; }
 
+/* Equity bar for the decision trainer */
+.eqbar { position: relative; height: 16px; border-radius: 99px; background: rgba(255, 255, 255, 0.12); margin: 24px 0; }
+.eqbar .fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 99px; }
+.eqbar .mark { position: absolute; top: -5px; bottom: -5px; width: 3px; transform: translateX(-50%); border-radius: 2px; }
+.eqbar .mark.need { background: var(--bad); }
+.eqbar .mark.line { background: var(--gold); }
+.eqbar .mark span { position: absolute; left: 50%; transform: translateX(-50%); font-size: 0.72rem; font-weight: 800; white-space: nowrap; }
+.eqbar .mark.l span { left: 0; transform: none; }
+.eqbar .mark.r span { left: auto; right: 0; transform: none; }
+.eqbar .mark.need span { bottom: calc(100% + 2px); color: var(--bad); }
+.eqbar .mark.line span { top: calc(100% + 2px); color: var(--gold); }
+
 .toast {
   position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); z-index: 60;
   background: var(--surface-2); border: 1px solid var(--line); padding: 10px 16px; border-radius: 12px; box-shadow: var(--shadow);

@@ -21,6 +21,7 @@ const PkDraws = lazy(() => import('./pages/poker/Draws'));
 const PkPotOdds = lazy(() => import('./pages/poker/PotOdds'));
 const PkPlay = lazy(() => import('./pages/poker/Play'));
 const PkCalc = lazy(() => import('./pages/poker/Calculator'));
+const PkSpots = lazy(() => import('./pages/poker/Spots'));
 const Daily = lazy(() => import('./pages/Daily'));
 const Glossary = lazy(() => import('./pages/Glossary'));
 const ProgressPage = lazy(() => import('./pages/ProgressPage'));
@@ -52,6 +53,7 @@ export default function App() {
           <Route path="/poker/pot-odds" element={<PkPotOdds />} />
           <Route path="/poker/play" element={<PkPlay />} />
           <Route path="/poker/calculator" element={<PkCalc />} />
+          <Route path="/poker/spots" element={<PkSpots />} />
           <Route path="/daily" element={<Daily />} />
           <Route path="/glossary" element={<Glossary />} />
           <Route path="/progress" element={<ProgressPage />} />
